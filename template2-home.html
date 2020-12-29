@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--reset.css must always above any css file-->
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+  <style>
+    /*START ESSENTIAL CSS PART*/
+    * {
+      box-sizing: border-box;
+      /*Height and width calc includes border and padding*/
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /*Navigation bar [caution! unless youre really sure , dont disturb this]*/
+
+    .topnav {
+
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      align-items: stretch;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #004080;
+      position: relative;
+
+    }
+
+    #main-icon {
+      height: 5rem;
+      width: 10rem;
+    }
+
+    .navBlock {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding-top: 2em;
+      text-decoration: none;
+    }
+
+    .navBlock:hover {
+      color: greenyellow;
+    }
+
+    /*Background image with white text at the middle of backgrnd pic*/
+
+    section.background-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0;
+      text-align: center;
+      overflow: hidden;
+      /*depend where you store this css url must be adapted accordingly*/
+      background-image: url(images/therapy.jpg);
+      background-size: cover;
+      width: 100%;
+      height: auto;
+    }
+
+    .background-title {
+      font-size: 5.5em;
+      font-family: Arial, Helvetica, sans-serif;
+      z-index: 1;
+      color: antiquewhite;
+      width: fit-content;
+    }
+
+    /*class put thing at the center of container, used in backgrnd pic*/
+    .centered {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 35vh auto;
+    }
+
+    /* Content [under progress] */
+
+    /*Blue container for title which in white color*/
+    .blue-container {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2rem;
+      text-align: center;
+      vertical-align: top;
+      background-color: #004080;
+      color: white;
+      margin: 0;
+      padding: 2.5rem;
+      border: 0;
+      width: 100%;
+    }
+
+    main {
+      height: 130vh;
+      width: auto;
+    }
+
+    /* footer  */
+
+    footer {
+      width: 100%;
+    }
+
+    .footer-container {
+      display: block;
+      background-color: black;
+    }
+
+    .footer-word {
+      color: white;
+    }
+
+    .footer-right,
+    .footer-left {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+
+    .footer-left {
+      margin: 3em 2em 2em 4em;
+      width: 70%;
+    }
+
+    .footer-left div label {
+      display: block;
+      margin: 1em 0;
+    }
+
+    #footer-privacy-link {
+      text-decoration: none;
+      color: cadetblue;
+      font-size: 1.2em;
+      margin-right: 7em;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* comment is feedback message input*/
+    #comment-footer {
+      resize: none;
+      overflow: auto;
+      height: 25vh;
+      width: 20vw;
+    }
+
+    #footer-btn {
+      padding: 1.5rem;
+      background-color: cadetblue;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 1em;
+      width: 14em;
+      color: rgb(31, 30, 30);
+    }
+
+    div#footer-feedback-box,
+    div#footer-text-input {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 3em;
+      margin-bottom: 5em;
+    }
+
+    .footer-right {
+      margin: 3em 2em 2em;
+    }
+
+    .footer-right div p {
+      font-size: x-large;
+      text-align: left;
+    }
+
+    .footer-right div a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color: #33383b;
+      border-radius: 2px;
+
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+
+      margin-right: 3px;
+      margin-top: 1em;
+    }
+
+    @media only screen and (max-width: 820px) {
+      /* For mobile phones: */
+
+      .topnav {
+        /*display: block;*/
+        flex-direction: column;
+        padding: 0 0 1em;
+        text-align: center;
+        align-items: center;
+      }
+
+      .navBlock {
+        display: block;
+      }
+
+      #footer-bottom-row a {
+        display: block;
+      }
+
+      #footer-bottom-row button {
+        display: block;
+        margin: 40px auto;
+      }
+
+      #footer-feedback-box label,
+      #footer-feedback-box textarea {
+        display: block;
+      }
+
+      #footer-feedback-box textarea#comment-footer {
+        width: 100%;
+      }
+    }
+
+    /*END ESSENTIAL CSS PART*/
+  </style>
+  <!--load css file down here to overwrite default css -->
+  <link rel="stylesheet" href="styles/home-styles.css">
+  <style>
+    .stats-div {
+      padding-top: 1em;
+      padding-left: 0;
+      height: fit-content;
+      margin-top: 0;
+     
+    }
+
+    .stats-div h2,
+    .stats-div p,
+    .stats-div button {
+      margin: 1vh 4em 2em  ;
+      text-align: left;
+     
+    }
+    .stats-div h2 {
+      margin-left: 2.7em;
+    }
+   
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <ul class="topnav">
+      <li>
+        <a href="#home"><img id="main-icon" src="images/icon.png" alt=" icon health minded" /></a>
+      </li>
+      <li><a class="navBlock" href="home.html">Home</a></li>
+      <li><a class="navBlock" href="#">Mental Health</a></li>
+      <li><a class="navBlock" href="services.html">Services</a></li>
+      <li><a class="navBlock" href="#">FAQs</a></li>
+      <li><a class="navBlock" href="about.html">About</a></li>
+      <li><a class="navBlock" href="contact-us.html">Contact Us</a></li>
+    </ul>
+    <section class="background-container">
+      <!--change p to h1 tag, better SEO-->
+      <div class="centered">
+        <h1 class="background-title"></h1>
+      </div>
+
+      <div id="" class="blue-container inside-background-container">
+        <p>You Don't Have To Struggle In Silence</p>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <div class="div-1">
+      <img id="mental" src="images/mental.jpg" alt="mental">
+      <h1 class="question-1"><u>What is mental health?</u></h1>
+      <p class="content-1">Mental health includes our emotional, psychological,<br>
+        and social well-being. It affects how we think, feel,<br>
+        and act as we cope with life. It also helps determine<br>
+        how we handle stress, relate to others, and make<br>
+        choices. Mental health is important at every stage of<br>
+        life, from childhood and adolescence through<br>
+        adulthood and aging.</p>
+    </div>
+
+    <div>
+      <h1 class="quote-2">Find your way to your stronger self</h1>
+    </div>
+    <div>
+      <img id="depressed" src="images/depressed-man.jpg" alt="depressed-man">
+      <h1 class="question-2"><u>Why is mental health important?</u></h1>
+      <p class="content-2">Mental health is important because it can help you to<br><br>
+        - Cope with the stresses of life<br>
+        - Be physically healthy<br>
+        - Have good relationships<br>
+        - Make meaningful contributions to tour community<br>
+        - Work productively<br>
+        - Realize your full potential</p>
+    </div>
+    <hr>
+    <div id="video-yt">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/lQhpetkwWnM" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+   
+    <div class="stats-div">
+      <h2 class="stats">Statistics</h2>
+      
+      <p class="content-3">Research shows that mental illnesses are common in the world, affecting tens of millions of
+        people each year.
+        Estimates suggest that only half of people with mental illnesses receive treatment. The information on these
+        pages
+        includes currently
+        available statistics on the prevalnce and treatment of mental illnesses in the world. In addition, information
+        is
+        provided
+        about possible consequences of mental illnesses, such as suicide and disability.
+      </p>
+      
+
+      <button class="button"><a class="getStarted" href="services.html"><b>Get Started &#10230;</b></a></button>
+
+    </div>
+
+
+  </main>
+
+  <footer class="footer-container">
+    <form id="feedback-form" class="footer-left" action="#" method="post">
+      <div>
+        <div id="footer-text-input">
+          <div>
+            <label class="footer-word" for="form-name">Name :</label>
+            <input type="text" name="Name" id="form-name" />
+          </div>
+
+          <div>
+            <label class="footer-word" for="form-email">Email :</label>
+            <input type="text" name="Name" id="form-email" />
+          </div>
+        </div>
+
+        <div id="footer-feedback-box">
+          <label class="footer-word" for="form-comment">Message :</label>
+          <textarea id="comment-footer" name="comment" form="feedback-form" placeholder="Enter message here"></textarea>
+        </div>
+      </div>
+
+      <div id="footer-bottom-row">
+        <a id="footer-privacy-link" href="privacy-policy-template.pdf" target="_blank">Privacy Term</a>
+        <button id="footer-btn" type="submit">
+          <strong>Send a Feedback</strong>
+        </button>
+      </div>
+    </form>
+
+    <div class="footer-right">
+      <div class="footer-icons">
+        <p class="footer-word">
+          <strong>Share this page</strong>
+        </p>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-envelope"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
