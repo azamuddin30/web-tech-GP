@@ -78,8 +78,9 @@
   outline:none;
 }
 
-.fa{
+.searchIcon i {
   font-size: 23px;
+  color: #33383b;
   
 }
 
