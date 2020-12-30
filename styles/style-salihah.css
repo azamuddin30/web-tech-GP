@@ -1,0 +1,75 @@
+
+
+.Content-1{
+  background-color: #004080;
+  color: white;
+  margin: auto;
+  padding: 40px;
+}
+
+.Content-2{
+  background-color: #06A1EB;
+  padding: 40px;
+}
+
+.Content-2 #ul1 , #ul2 , #ul3{
+  padding: 10px;
+}
+
+.Content-2 ul{
+  padding: 10px;
+}
+
+.Content-3-contents{
+  background-color: #004080;
+  clear:both;
+  color: white;
+}
+
+.C3-depression , .C3-anxiety , .image4{
+  padding: 20px;
+}
+
+.blank{
+  background-color: black;
+  padding: 0px;
+  margin: 0px;
+}
+
+.C3-getHelp{
+  background-color: #004080;
+  clear:both;
+  color: white;
+  padding: 20px;
+}
+
+.Content-3-List{
+  border-style: groove;
+  float: left;
+  padding: 20px;
+  background-color: #f1f1f1;
+  width: 20%;
+}
+
+.Content-3-contents{
+  background-color: #004080;
+  clear:both;
+  color: white;
+}
+
+.C3-depression , .C3-anxiety , .image4{
+  padding: 20px;
+}
+
+.blank{
+  background-color: black;
+  padding: 0px;
+  margin: 0px;
+}
+
+.C3-getHelp{
+  background-color: #004080;
+  clear:both;
+  color: white;
+  padding: 20px;
+}
